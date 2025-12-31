@@ -8,7 +8,8 @@ export default defineConfig({
     alias:{
       '@config':path.resolve(__dirname,'src/config'),
       '@pages':path.resolve(__dirname,'src/pages/index.js'),
-      '@components':path.resolve(__dirname,'src/components/index.js')
+      '@components':path.resolve(__dirname,'src/components/index.js'),
+      '@assets':path.resolve(__dirname,'src/assets')
 
     }
   }

@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
-
+import { Inicio } from "@pages";
 const router = createBrowserRouter([
     {
-        element:<h1>Inicio</h1>,
+        element:<Inicio/>,
         path:'/'        
     }
 ]);
