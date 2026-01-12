@@ -14,7 +14,7 @@ export const NavMain =()=>{
                 }}
             >
                 <Box>
-                    <Typography variant="h5" >Titulo</Typography>
+                    <Typography variant="h5" color="secondary">Titulo</Typography>
                 </Box>
                 <Box sx={{ display: 'flex' }}>
                     <Button sx={{ color: 'white' }} >

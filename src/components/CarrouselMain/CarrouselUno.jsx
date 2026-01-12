@@ -10,7 +10,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 export const CarrouselUno = () => {
-
     return (
         <Swiper
             modules={[Navigation, Pagination, Scrollbar]}
@@ -94,6 +93,7 @@ export const CarrouselUno = () => {
                     </Box>
                 </Box>
             </SwiperSlide>
+            
             
             <div className="custom-prev">
                 <IconButton
