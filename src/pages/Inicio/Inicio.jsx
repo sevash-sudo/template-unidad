@@ -1,13 +1,18 @@
 import { Box, Typography } from "@mui/material";
-import { CarrouselUno ,CarrouselDos,NavMain} from '@components'
+import { 
+    NavMain, 
+    CarrouselUno, CarrouselDos, CarrouselTres, 
+    InfoGeneralUno, InfoGeneralDos,InfoGeneralTres, 
+    NoticiasUno
+} from '@components'
 
 export const Inicio = () => {
     return (
         <Box>
-            <NavMain/>
-            <CarrouselUno />
-            <CarrouselDos />
-            
+            <NavMain />
+            <CarrouselTres />
+            <InfoGeneralTres/>
+            <NoticiasUno/>
         </Box>
     );
 }

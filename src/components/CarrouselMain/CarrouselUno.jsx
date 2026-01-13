@@ -24,7 +24,7 @@ export const CarrouselUno = () => {
             onSlideChange={() => console.log('slide change')}
             onSwiper={(swiper) => console.log(swiper)}
         >
-            
+
             <SwiperSlide>
 
                 <Box sx={{
@@ -54,47 +54,45 @@ export const CarrouselUno = () => {
                             left: '50%',
                             transform: 'translate(-50%,-50%)',
                             zIndex: 10,
-                            display:'flex',
-                            flexDirection:'column', gap:'1rem'
+                            display: 'flex',
+                            flexDirection: 'column', gap: '1rem'
                         }}
                     >
-                        <Typography 
-                         color='text' 
-                         textAlign={'center'}
-                         sx={(theme)=>({
-                            [theme.breakpoints.up('xs')]:{
-                                fontSize:theme.typography.h5.fontSize
-                            },
-                            [theme.breakpoints.up('md')]:{
-                                fontSize:theme.typography.h3.fontSize
-                            }
-                         })}
-                         >
+                        <Typography
+                            color='text'
+                            textAlign={'center'}
+                            sx={(theme) => ({
+                                [theme.breakpoints.up('xs')]: {
+                                    fontSize: theme.typography.h5.fontSize
+                                },
+                                [theme.breakpoints.up('md')]: {
+                                    fontSize: theme.typography.h3.fontSize
+                                }
+                            })}
+                        >
                             Lorem ipsum dolor sit amet consectetur.
                         </Typography>
-                        <Typography      sx={{
-                            textAlign:'center',
-                            color:'white',
-                            display:{xs:'none', md:'block'}
+                        <Typography sx={{
+                            textAlign: 'center',
+                            color: 'white',
+                            display: { xs: 'none', md: 'block' }
                         }}>
                             Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.
                         </Typography>
                         <Button
                             variant='outlined'
                             sx={{
-                                borderColor:'white',
-                                color:'white',
-                                marginInline:'auto',
-                                borderRadius:'1rem'
-                            }}
-                        >
+                                borderColor: 'white',
+                                color: 'white',
+                                marginInline: 'auto',
+                                borderRadius: '1rem'
+                            }}>
                             Action
                         </Button>
                     </Box>
                 </Box>
             </SwiperSlide>
-            
-            
+
             <div className="custom-prev">
                 <IconButton
                     component="button"
@@ -106,15 +104,12 @@ export const CarrouselUno = () => {
                         transform: 'translateY(-50%)',
                         left: '10px',
                         zIndex: 10,
-                    }}
-                >
+                    }}>
                     <ArrowBackIosNewIcon />
                 </IconButton>
             </div>
-
             <div className="custom-next">
                 <IconButton
-
                     sx={{
                         color: 'white',
                         position: 'absolute',
@@ -122,8 +117,7 @@ export const CarrouselUno = () => {
                         top: '50%',
                         right: '10px',
                         zIndex: 10
-                    }}
-                >
+                    }}>
                     <ArrowForwardIosIcon />
                 </IconButton>
             </div>

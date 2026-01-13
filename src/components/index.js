@@ -1,2 +1,5 @@
 export * from './CarrouselMain'
 export * from './NavMain'
+export * from './InfoGeneral'
+export * from './Noticias'
+export * from './InputBusqueda/InputBusqueda'

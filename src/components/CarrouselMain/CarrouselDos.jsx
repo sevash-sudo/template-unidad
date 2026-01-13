@@ -12,13 +12,13 @@ import Item from '@assets/Carrusel2.png'
 import { useState } from 'react';
 export const CarrouselDos = () => {
     const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+        `;
     const [indexStatus, setIndexStatus] = useState(0);
 
     const themeMui = useTheme();
