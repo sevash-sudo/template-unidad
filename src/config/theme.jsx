@@ -1,6 +1,7 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const ThemeMain = createTheme({
+
     typography: {
         fontFamily: 'Montserrat',
         h1: {
@@ -30,6 +31,7 @@ const Theme = ({ children }) => {
 
     return (
         <ThemeProvider theme={ThemeMain}>
+            
             {children}
         </ThemeProvider>
     );

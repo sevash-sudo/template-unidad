@@ -1,4 +1,4 @@
-import { Autocomplete, Button, Divider, IconButton, InputBase, Paper, TextField } from "@mui/material";
+import { Autocomplete, Button, Divider, IconButton, InputBase, Paper, TextField, Typography } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 
@@ -6,7 +6,7 @@ import { useState } from "react";
 export const InputBusqueda = () => {
     return (
         <Paper component={'form'} elevation={3}
-            sx={{  display: 'flex', alignItems: 'center', width:{sm:'100%',md:'50%'}  }}>
+            sx={{  display: 'flex', alignItems: 'center', width:{sm:'90%',md:'50%'}, marginBlock:'2rem' , marginInline:'auto' }}>
             <IconButton sx={{ p: '10px' }} aria-label="menu">
                 <SearchIcon />
             </IconButton>
@@ -16,10 +16,11 @@ export const InputBusqueda = () => {
                 inputProps={{ 'aria-label': 'search google maps' }}
             />
             <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            <SelectStand/>
-
-            <Button variant="contained">
+            <SelectUnidad/>
+            <Button sx={{width:'8rem', height:'3.5rem', backgroundColor:'primary.main'}}>
+                <Typography color="text">
                 Buscar
+                </Typography>
             </Button>
         </Paper>
     );
@@ -53,6 +54,7 @@ const SelectUnidad = () => {
 
     return (
         <Autocomplete
+        
             disablePortal
             options={[
                 { label: 'The Shawshank Redemption', year: 1994 },
@@ -61,7 +63,18 @@ const SelectUnidad = () => {
                 { label: 'The Dark Knight', year: 2008 },
                 { label: '12 Angry Men', year: 1957 }
             ]}
-            renderInput={(params) => <TextField variant="standard" sx={{ width: '20rem' }} {...params} label="Unidad Administrativa" />}
+            renderInput={(params) => <TextField 
+                placeholder="Unidades"
+                sx={{ 
+                    width: '20rem', 
+                    border:0,
+                    '& .MuiOutlinedInput-root':{
+                        '& fieldset':{
+                            border:'none'
+                        }
+                    }
+                
+                }} {...params} />}
         />
     );
 }

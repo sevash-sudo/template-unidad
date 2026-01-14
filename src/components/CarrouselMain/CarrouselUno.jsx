@@ -40,7 +40,6 @@ export const CarrouselUno = () => {
                     }
                 }}>
                     <Box
-
                         src={Item}
                         component={'img'}
                         sx={{
