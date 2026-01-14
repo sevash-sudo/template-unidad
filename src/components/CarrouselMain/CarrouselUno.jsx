@@ -26,7 +26,6 @@ export const CarrouselUno = () => {
         >
 
             <SwiperSlide>
-
                 <Box sx={{
                     position: 'relative',
                     "&::before": {

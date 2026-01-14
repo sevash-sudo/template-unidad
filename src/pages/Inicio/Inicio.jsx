@@ -3,7 +3,7 @@ import {
     NavMain, 
     CarrouselUno, CarrouselDos, CarrouselTres, 
     InfoGeneralUno, InfoGeneralDos,InfoGeneralTres, 
-    NoticiasUno, NoticiasDos
+    NoticiasUno, NoticiasDos, NoticiasTres
 } from '@components'
 
 export const Inicio = () => {
@@ -15,7 +15,8 @@ export const Inicio = () => {
             
             <InfoGeneralTres/>
             
-            <NoticiasDos/>
+            <NoticiasTres/>
+            
         </Box>
     );
 }
