@@ -10,7 +10,10 @@ export const NavMain =()=>{
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    paddingInline: '1.5rem'
+                    paddingInline: '1.5rem',
+                    position:'sticky',
+                    top:0,
+                    zIndex:10
                 }}
             >
                 <Box>

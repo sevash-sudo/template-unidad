@@ -13,13 +13,13 @@ export const NoticiasTres = () => {
             <Typography variant="h5" color="secondary" textAlign={'center'}>ÚLTIMAS NOTICIAS</Typography>
 
             <Box sx={{
-                width: { xs: '100%', md: '80%' },
+                width: { xs: '100%', md: '80%' },                
                 position: 'relative', marginInline: 'auto'
             }}>
                 <Box
                     component={'img'}
                     src={ItemIMg}
-                    sx={{ width: '100%', maxHeight: '35rem', objectFit: 'cover', borderRadius: { xs: 0, md: '.5rem' } }}
+                    sx={{ width: '100%', height: '35rem', objectFit: 'cover', borderRadius: { xs: 0, md: '.5rem' } }}
                 />
 
                 <Box sx={{

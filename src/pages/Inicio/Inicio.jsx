@@ -3,19 +3,21 @@ import {
     NavMain, 
     CarrouselUno, CarrouselDos, CarrouselTres, 
     InfoGeneralUno, InfoGeneralDos,InfoGeneralTres, 
-    NoticiasUno, NoticiasDos, NoticiasTres
+    NoticiasUno, NoticiasDos, NoticiasTres,
+    BannersUno, BannersDos, BannersTres,
+    FooterUno,FooterDos,FooterTres
 } from '@components'
 
 export const Inicio = () => {
+
     return (
         <Box>
             <NavMain />
-
-            <CarrouselTres />
-            
-            <InfoGeneralTres/>
-            
-            <NoticiasTres/>
+            <CarrouselTres />            
+            <InfoGeneralTres/>            
+            <NoticiasUno/>
+            <BannersTres/>
+            <FooterDos/>
             
         </Box>
     );

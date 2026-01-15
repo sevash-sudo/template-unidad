@@ -65,7 +65,7 @@ export const CarrouselTres = () => {
                         <Box
                             src={Item}
                             component={'img'}
-                            sx={{ width: '100%', height: '95vh', objectFit: '-moz-initial' }}
+                            sx={{ width: '100%', height: '95vh', objectFit: 'cover' }}
                         />
                     </SwiperSlide>
                 ))}
@@ -121,7 +121,7 @@ export const CarrouselTres = () => {
                     },
                     [theme.breakpoints.up('md')]: {
                         position: 'absolute',
-                        width: '35%',
+                        width: '45%',
                         top: '10%',
                         left: '5%'
                     }
