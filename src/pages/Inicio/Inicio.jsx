@@ -13,10 +13,10 @@ export const Inicio = () => {
     return (
         <Box>
             <NavMain />
-            <CarrouselTres />            
-            <InfoGeneralTres/>            
+            <CarrouselUno />            
+            <InfoGeneralUno/>            
             <NoticiasUno/>
-            <BannersTres/>
+            <BannersUno/>
             <FooterDos/>
             
         </Box>

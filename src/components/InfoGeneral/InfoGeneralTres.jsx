@@ -116,12 +116,7 @@ export const InfoGeneralTres = () => {
                     </Box>
                 </Grid>
             </Grid>
-            <Button variant="outlined" color="secondary" sx={{
-                borderRadius: '1rem',
-                borderWidth: '3px'
-            }}>
-                ORGANIGRAMA
-            </Button>
+           
         </Box>
     );
 }

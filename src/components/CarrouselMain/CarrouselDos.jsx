@@ -8,7 +8,8 @@ import 'swiper/css/scrollbar';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { keyframes } from '@mui/system';
-import Item from '@assets/Carrusel2.png'
+import Item1 from '@assets/Carrusel1.png'
+import Item2 from '@assets/Carrusel2.png'
 import { useState } from 'react';
 export const CarrouselDos = () => {
     const fadeIn = keyframes`
@@ -29,13 +30,15 @@ export const CarrouselDos = () => {
         {
             title: "Lorem ipsum dolor sit amet consectetur.",
             descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.",
-            url: "google.com"
+            url: "google.com",
+            img:Item1,
         },
 
         {
             title: "Lorem ipsum dolor sit amet consectetur.2",
             descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.2",
-            url: "google.com"
+            url: "google.com",
+            img:Item2
         }
     ];
     return (
@@ -45,7 +48,7 @@ export const CarrouselDos = () => {
             zIndex: 1
         }}>
             <Swiper
-                effect="cube"
+                loop={true}
                 modules={[Navigation, Pagination]}
                 navigation={{
                     nextEl: '.custom-next',
@@ -55,8 +58,8 @@ export const CarrouselDos = () => {
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                onSlideChange={(swiper) => { setIndexStatus(swiper?.activeIndex) }}
-                onSwiper={(swiper) => setIndexStatus(swiper?.activeIndex)}
+                onSlideChange={(swiper) => { console.log(swiper); setIndexStatus(swiper?.realIndex) }}
+                onSwiper={(swiper) => setIndexStatus(swiper?.realIndex)}
                 style={{
                     width: isMdDown ? '100%' : '65%',
                     zIndex: 2
@@ -65,7 +68,7 @@ export const CarrouselDos = () => {
                 {Elements.map(element => (
                     <SwiperSlide>
                         <Box
-                            src={Item}
+                            src={element.img}
                             component={'img'}
                             sx={{ height: '93vh', width: '100%', objectFit: 'fill' }}
                         />
@@ -80,7 +83,7 @@ export const CarrouselDos = () => {
                             color: 'white',
                             padding: '8px',
                             position: 'absolute',
-                            bottom: '.5rem',
+                            bottom: '-1rem',
                             transform: 'translateY(-50%)',
                             right: '6rem',
                             zIndex: 10
@@ -97,7 +100,7 @@ export const CarrouselDos = () => {
                             color: 'white',
                             position: 'absolute',
                             transform: 'translateY(-50%)',
-                            bottom: '.5rem',
+                            bottom: '-1rem',
                             right: '1rem',
                             zIndex: 10
                         }}
@@ -110,13 +113,12 @@ export const CarrouselDos = () => {
                 <Box sx={(theme) => ({
                     display: index === indexStatus ? 'block' : 'none',
                     zIndex: 4,
-
                     backgroundColor: 'white',
                     [theme.breakpoints.down('md')]: {
                         position: 'absolute',
                         top: '2rem',
                         width: '90%',
-                        height: '80%',
+                        minHeight: '70%',
                         left: '50%',
                         transform: 'translateX(-50%)',
                         borderRadius: '.5rem',
@@ -136,18 +138,18 @@ export const CarrouselDos = () => {
                             alignContent: 'center',
                             alignItems: 'center',
                             padding: '4rem',
-                            gap: '3rem'
+                            gap: '1rem'
                         }}
                     >
-                        <Typography variant='h3' color='primary'>{item?.title}</Typography>
-                        <Typography fontSize={'1.2rem'} textAlign={'justify'}>{item?.descriptions}</Typography>
+                        <Typography variant='h5' color='primary'>{item?.title}</Typography>
+                        <Typography fontSize={'1.1rem'} textAlign={'justify'}>{item?.descriptions}</Typography>
                         <Button sx={{
                             borderRadius: '1rem',
                             borderWidth: '2px',
                             borderStyle: 'solid',
                             borderColor: 'primary'
                         }}>
-                            Ir
+                            Seguir Leyendo
                         </Button>
                     </Box>
                 </Box>

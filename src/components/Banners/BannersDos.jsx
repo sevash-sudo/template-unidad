@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-import Item from '@assets/Carrusel2.png'
+import Item1 from '@assets/Carrusel2.png'
 import Item2 from '@assets/Carrusel1.png'
 import { Pagination, Navigation, EffectFade } from 'swiper/modules';
 import { Box, useTheme, useMediaQuery, IconButton, Typography, Button } from '@mui/material';
@@ -40,35 +40,6 @@ export const BannersDos = () => {
                     <Box sx={{ display: 'flex', backgroundColor: 'white',flexDirection:{xs:'column', md:'row'}  }}>
                         <Box
                             component={'img'}
-                            src={Item}
-                            sx={{
-                                width: { xs: '100%', md: '70%' },
-                                objectFit: 'cover',
-                                height: {xs:'20rem', md:'30rem'},
-                                flexShrink: 0,
-                            }}
-                        />
-                        <Box sx={{
-                            display: 'flex', flexDirection: 'column',
-                            gap: '1rem', padding: '1rem 2rem', alignItems: 'start',
-                            width: { xs: '100%', md: '30%' }
-                        }}>
-                            <Typography variant='h6' color='secondary'>
-                                Lorem ipsum dolor sit amet consectetur.
-                            </Typography>
-                            <Typography>
-                                Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.
-                            </Typography>
-                            <Button variant='outlined' color='primary' sx={{ borderRadius: '1rem' }}>
-                                VISITAR
-                            </Button>
-                        </Box>
-                    </Box>
-                </SwiperSlide>
-                <SwiperSlide >
-                    <Box sx={{ display: 'flex', backgroundColor: 'white',flexDirection:{xs:'column', md:'row'}  }}>
-                        <Box
-                            component={'img'}
                             src={Item2}
                             sx={{
                                 width: { xs: '100%', md: '70%' },
@@ -89,7 +60,36 @@ export const BannersDos = () => {
                                 Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.
                             </Typography>
                             <Button variant='outlined' color='primary' sx={{ borderRadius: '1rem' }}>
-                                VISITAR
+                                SEGUIR LEYENDO
+                            </Button>
+                        </Box>
+                    </Box>
+                </SwiperSlide>
+                <SwiperSlide >
+                    <Box sx={{ display: 'flex', backgroundColor: 'white',flexDirection:{xs:'column', md:'row'}  }}>
+                        <Box
+                            component={'img'}
+                            src={Item1}
+                            sx={{
+                                width: { xs: '100%', md: '70%' },
+                                objectFit: 'cover',
+                                height: {xs:'20rem', md:'30rem'},
+                                flexShrink: 0,
+                            }}
+                        />
+                        <Box sx={{
+                            display: 'flex', flexDirection: 'column',
+                            gap: '1rem', padding: '1rem 2rem', alignItems: 'start',
+                            width: { xs: '100%', md: '30%' }
+                        }}>
+                            <Typography variant='h6' color='secondary'>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </Typography>
+                            <Typography>
+                                Descripcion Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.
+                            </Typography>
+                            <Button variant='outlined' color='primary' sx={{ borderRadius: '1rem' }}>
+                                SEGUIR LEYENDO
                             </Button>
                         </Box>
                     </Box>

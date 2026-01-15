@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y , EffectFade} from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Box, IconButton, Typography, Button } from '@mui/material'
@@ -15,7 +15,8 @@ export const CarrouselUno = () => {
     return (
         <Swiper
             effect='fade'
-            modules={[EffectFade,Navigation, Pagination, Scrollbar]}
+            loop={true}
+            modules={[EffectFade, Navigation, Pagination, Scrollbar]}
             navigation={{
                 nextEl: '.custom-next',
                 prevEl: '.custom-prev'
@@ -23,7 +24,8 @@ export const CarrouselUno = () => {
             spaceBetween={0}
             slidesPerView={1}
             pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}            
+            scrollbar={{ draggable: true }}
+
             onSwiper={(swiper) => console.log(swiper)}
         >
 
@@ -87,7 +89,7 @@ export const CarrouselUno = () => {
                                 marginInline: 'auto',
                                 borderRadius: '1rem'
                             }}>
-                            Action
+                            Seguir Leyendo
                         </Button>
                     </Box>
                 </Box>
@@ -152,7 +154,7 @@ export const CarrouselUno = () => {
                                 marginInline: 'auto',
                                 borderRadius: '1rem'
                             }}>
-                            Action
+                            Seguir Leyendo
                         </Button>
                     </Box>
                 </Box>

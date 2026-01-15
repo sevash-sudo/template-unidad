@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { keyframes } from '@mui/system';
-import Item from '@assets/Carrusel2.png'
+import Item from '@assets/Carrusel1.png'
 import { useState } from 'react';
 export const CarrouselTres = () => {
     const fadeIn = keyframes`
@@ -25,14 +25,14 @@ export const CarrouselTres = () => {
 
     const Elements = [
         {
-            title: "Lorem ipsum dolor sit amet consectetur.",
-            descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.",
+            title: "No vamos a parar hasta inhibir actos que lastiman a la sociedad: Julio Menchaca",
+            descriptions: "Se informaron avances en: pirotecnia decomisada, personas localizadas, detenciones y combate al robo de hidrocarburos.",
             url: "google.com"
         },
 
         {
             title: "Lorem ipsum dolor sit amet consectetur.2",
-            descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.2",
+            descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.2 , Asi hay mas descipcion de la noticia para que la gente sepa de todas las cosas,que tiene ",
             url: "google.com"
         }
     ];
@@ -43,7 +43,7 @@ export const CarrouselTres = () => {
             zIndex: 1
         }}>
             <Swiper
-                effect="cube"
+                loop={true}
                 modules={[Navigation, Pagination]}
                 navigation={{
                     nextEl: '.custom-next',
@@ -53,8 +53,8 @@ export const CarrouselTres = () => {
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 scrollbar={{ draggable: true }}
-                onSlideChange={(swiper) => { setIndexStatus(swiper?.activeIndex) }}
-                onSwiper={(swiper) => setIndexStatus(swiper?.activeIndex)}
+                onSlideChange={(swiper) => { console.log(swiper); setIndexStatus(swiper?.realIndex) }}
+                onSwiper={(swiper) => setIndexStatus(swiper?.realIndex)}
                 style={{
                     width: '100%',
                     position: 'relative',
@@ -135,12 +135,12 @@ export const CarrouselTres = () => {
                             justifyContent: 'center',
                             alignContent: 'center',
                             alignItems: 'center',
-                            padding: '4rem',
-                            gap: '3rem'
+                            padding: {xs:'2rem',md:'4rem'},
+                            gap: '2rem'
                         }}
                     >
-                        <Typography variant='h3' color='secondary'>{item?.title}</Typography>
-                        <Typography fontSize={'1.2rem'} color='text' textAlign={'justify'}>{item?.descriptions}</Typography>
+                        <Typography variant='h5' color='secondary' fontWeight={'bold'} textAlign={'justify'}>{item?.title}</Typography>
+                        <Typography  color='text' textAlign={'justify'}>{item?.descriptions}</Typography>
                         <Button
                             color='text'
                             sx={{
@@ -150,7 +150,7 @@ export const CarrouselTres = () => {
                                 borderColor: 'primary'
                             }}>
                             <Typography variant='h5'>
-                                Ir
+                                Seguir leyendo
                             </Typography>
                         </Button>
                     </Box>

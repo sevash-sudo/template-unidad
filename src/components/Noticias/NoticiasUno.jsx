@@ -7,7 +7,7 @@ import OPenView from '@assets/OpenView.svg'
 export const NoticiasUno = () => {
     return (
         <Box bgcolor={'white'}>
-            <Typography variant="h5" color="secondary" textAlign={'center'}>ÚLTIMAS NOTICIAS</Typography>            
+            <Typography variant="h5" color="secondary" textAlign={'center'}>ÚLTIMAS NOTICIAS</Typography>
             <Grid container spacing={2} width={'90%'} marginInline={'auto'} marginBlock={'4rem'}  >
                 <Grid size={{ xs: 12, md: 6, lg: 6 }}
                     sx={{
@@ -51,40 +51,39 @@ export const NoticiasUno = () => {
                     </Box>
                 </Grid>
                 <Grid size={{ xs: 12, md: 6 }} >
-                    {[1, 2, 3].map(item=>(
-                    <Box sx={{ padding: '.5rem', backgroundColor: '#F0F0F0', borderRadius: '.3rem', display: 'flex', gap: '1rem', marginBottom:'1rem' }}>
-                        <Box
-                            component={'img'}
-                            src={ItemIMg}
-                            sx={{
-                                borderRadius: '.3rem',
-                                height: '6rem',
-                                width: '6rem',
-                                objectFit: 'cover',
-                                marginInline: { xs: 'auto', md: 0 }
-                            }}
-                        />
-                        <Box>
-                            <Typography variant="h6" color="primary">Título de la nota</Typography>
-                            <Box sx={{ display: 'flex', alignContent: 'center', gap: '.6rem' }}>
-                                <Typography variant="body2" textAlign={'justify'}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac molestie felis. Nullam accumsan quam at neque dignissim, id scelerisque eros dapibus.
-                                </Typography>
-                                <IconButton>
-                                    <Box
-                                        src={OPenView}
-                                        component={'img'}
-
-                                    />
-                                </IconButton>
+                    {[1, 2, 3].map(item => (
+                        <Box sx={{ padding: '.5rem', backgroundColor: '#F0F0F0', borderRadius: '.3rem', display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
+                            <Box
+                                component={'img'}
+                                src={ItemIMg}
+                                sx={{
+                                    borderRadius: '.3rem',
+                                    height: '6rem',
+                                    width: '6rem',
+                                    objectFit: 'cover',
+                                    marginInline: { xs: 'auto', md: 0 }
+                                }}
+                            />
+                            <Box>
+                                <Typography variant="h6" color="primary">Título de la nota</Typography>
+                                <Box sx={{ display: 'flex', alignContent: 'center', gap: '.6rem' }}>
+                                    <Typography variant="body2" textAlign={'justify'}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac molestie felis. Nullam accumsan quam at neque dignissim, id scelerisque eros dapibus. Etiam convallis ultrices nibh vitae viverra. neque dignissim, id scelerisque eros dapibus. Etiam convallis ultrices nibh vitae viverra.sddsdsadedwwed
+                                    </Typography>
+                                    <IconButton>
+                                        <Box
+                                            src={OPenView}
+                                            component={'img'}
+                                        />
+                                    </IconButton>
+                                </Box>
                             </Box>
                         </Box>
-                    </Box>
                     ))}
                 </Grid>
 
             </Grid>
-             <Box sx={{ display: 'flex', }}>
+            <Box sx={{ display: 'flex', }}>
                 <Button variant="outlined" color="secondary" sx={{ marginInline: 'auto' }}>
                     Ver todas la noticias
                 </Button>

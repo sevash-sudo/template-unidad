@@ -2,9 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-import Item from '@assets/Carrusel1.png'
-import { Pagination, Navigation } from 'swiper/modules';
-import { Box, useTheme, useMediaQuery, IconButton } from '@mui/material';
+import Item1 from '@assets/Carrusel1.png'
+import Item2 from '@assets/Carrusel2.png'
+import { Pagination, Navigation, EffectFade } from 'swiper/modules';
+import { Box, useTheme, useMediaQuery, IconButton, Typography, Button } from '@mui/material';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -44,7 +45,7 @@ export const BannersUno = () => {
                 }}
                 loop={true}
                 scrollbar={{ draggable: true }}
-                modules={[Pagination, Navigation]}
+                modules={[Pagination, Navigation, EffectFade]}
                 spaceBetween={0}
                 slidesPerView={1}
                 className="mySwiper"
@@ -52,27 +53,77 @@ export const BannersUno = () => {
                     width: isMdDown ? '90%' : '80%'
                 }}>
                 <SwiperSlide >
-                    <Box
-                        component={'img'}
-                        src={Item}
-                        sx={{
-                            width: '100%',
-                            borderRadius: '.5rem',
+                    <Box sx={{
+                        position: 'relative',
+                        zIndex: 1
+                    }}>
+                        <Box
+                            component={'img'}
+                            src={Item1}
+                            sx={{
+                                width: '100%',
+                                height: {xs:'20rem', md:'40rem'},
+                                borderRadius: '.5rem',
+                                zIndex: 2
+                            }}
+                        />
+                        <Box
+                            sx={{
+                                position: 'absolute',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                right: '3rem',
+                                backgroundColor: 'white',
+                                maxWidth: '40%',
+                                padding: '2rem',
+                                borderRadius: '.5rem',
 
-
-                        }}
-                    />
+                            }}
+                        >
+                            <Typography variant='h4' color='primary' textAlign={'justify'}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                            <Typography sx={{ marginBlock: '1rem' }}>Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.</Typography>
+                            <Button color='secondary' variant='outlined' >
+                                Seguir Leyendo
+                            </Button>
+                        </Box>
+                    </Box>
                 </SwiperSlide>
-                <SwiperSlide >
-                    <Box
-                        component={'img'}
-                        src={Item}
-                        sx={{
-                            width: '100%',
-                            borderRadius: '.5rem',
 
-                        }}
-                    />
+<SwiperSlide >
+                    <Box sx={{
+                        position: 'relative',
+                        zIndex: 1
+                    }}>
+                        <Box
+                            component={'img'}
+                            src={Item2}
+                            sx={{
+                                width: '100%',
+                                height: {xs:'20rem', md:'40rem'},
+                                borderRadius: '.5rem',
+                                zIndex: 2
+                            }}
+                        />
+                        <Box
+                            sx={{
+                                position: 'absolute',
+                                top: '50%',
+                                transform: 'translateY(-50%)',
+                                right: '3rem',
+                                backgroundColor: 'white',
+                                maxWidth: '40%',
+                                padding: '2rem',
+                                borderRadius: '.5rem',
+
+                            }}
+                        >
+                            <Typography variant='h4' color='primary' textAlign={'justify'}>Lorem ipsum dolor sit amet consectetur.</Typography>
+                            <Typography sx={{ marginBlock: '1rem' }}>Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.</Typography>
+                            <Button color='secondary' variant='outlined' >
+                                Seguir Leyendo
+                            </Button>
+                        </Box>
+                    </Box>
                 </SwiperSlide>
 
 
@@ -101,7 +152,7 @@ export const BannersUno = () => {
                             position: 'absolute',
                             transform: 'translateY(-50%)',
                             top: '50%',
-                            right: '10px',
+                            right: '5px',
                             zIndex: 99
                         }}>
                         <ArrowForwardIosIcon />
@@ -109,6 +160,6 @@ export const BannersUno = () => {
                 </div>
             </Swiper>
 
-        </Box>
+        </Box >
     );
 }

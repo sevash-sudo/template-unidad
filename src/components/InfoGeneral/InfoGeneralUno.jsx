@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Logo from '@assets/Logo.png'
-import ItemImg from '@assets/Carrusel2.png'
+import ItemImg from '@assets/Carrusel1.png'
 
 export const InfoGeneralUno = () => {
 
@@ -74,12 +74,6 @@ export const InfoGeneralUno = () => {
                     </Box>
                 </Grid>
             </Grid>
-            <Button variant="outlined" color="secondary" sx={{
-                borderRadius:'1rem',
-                borderWidth:'3px'
-            }}>
-                ORGANIGRAMA
-            </Button>
         </Box>
     );
 }

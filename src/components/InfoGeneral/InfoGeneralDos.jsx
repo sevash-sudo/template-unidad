@@ -12,7 +12,7 @@ import 'swiper/css/scrollbar';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { useState } from "react";
-import Item from '@assets/Mision.png'
+import Item from '@assets/Carrusel1.png'
 export const InfoGeneralDos = () => {
     const fadeIn = keyframes`
   from {
@@ -30,12 +30,21 @@ export const InfoGeneralDos = () => {
 
     const Elements = [
         {
+            type:"Misión",
             title: "Lorem ipsum dolor sit amet consectetur.",
             descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.",
             url: "google.com"
         },
 
         {
+            type:"Visión",
+            title: "Lorem ipsum dolor sit amet consectetur.2",
+            descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.2",
+            url: "google.com"
+        },
+        
+        {
+            type:"Funciones",
             title: "Lorem ipsum dolor sit amet consectetur.2",
             descriptions: "Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.2",
             url: "google.com"
@@ -61,7 +70,7 @@ export const InfoGeneralDos = () => {
             }}>
 
                 <Swiper
-                    effect="cube"
+                    loop={true}
                     modules={[Navigation, Pagination]}
                     navigation={{
                         nextEl: '.custom-next',
@@ -71,8 +80,8 @@ export const InfoGeneralDos = () => {
                     slidesPerView={1}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
-                    onSlideChange={(swiper) => { setIndexStatus(swiper?.activeIndex) }}
-                    onSwiper={(swiper) => setIndexStatus(swiper?.activeIndex)}
+                    onSlideChange={(swiper) => { setIndexStatus(swiper?.realIndex) }}
+                    onSwiper={(swiper) => setIndexStatus(swiper?.realIndex)}
                     style={{
                         width: isMdDown ? '100%' : '50%',
                         zIndex: 2
@@ -86,7 +95,7 @@ export const InfoGeneralDos = () => {
                                 height: '100%',
                                 padding: '4rem'
                             }}>
-                                <Typography variant="h5" color="primary" marginBlock={'1.5rem'}>Misión</Typography>
+                                <Typography variant="h5" color="primary" marginBlock={'1.5rem'}>{item.type}</Typography>
                                 <Typography textAlign={'justify'}>
                                     Lorem ipsum dolor sit amet consectetur. Adipiscing amet pharetra lectus at congue eget. Tristique vel elementum purus fermentum est purus turpis a interdum. In vitae bibendum pretium placerat imperdiet nam. Aenean parturient non sed nisi. Donec nibh.
                                 </Typography>
@@ -147,12 +156,7 @@ export const InfoGeneralDos = () => {
                 ))}
             </Box>
 
-            <Button variant="outlined" color="secondary" sx={{
-                borderRadius: '1rem',
-                borderWidth: '3px'
-            }}>
-                ORGANIGRAMA
-            </Button>
+         
         </Box>
     );
 }

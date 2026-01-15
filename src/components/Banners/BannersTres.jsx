@@ -41,40 +41,6 @@ export const BannersTres = () => {
                     <Box sx={{ display: 'flex', backgroundColor: 'white', flexDirection: 'column' }}>
                         <Box
                             component={'img'}
-                            src={Item}
-                            sx={{
-                                width: '100%',
-                                objectFit: 'cover',
-                                height: { xs: '20rem', md: '30rem' },
-                                flexShrink: 0,
-                            }}
-                        />
-                        <Box sx={{
-                            display: 'flex', flexDirection: 'column',
-                            gap: '1rem', alignItems: 'start',
-                            backgroundColor: 'primary.main', padding: '1rem 2rem'
-                        }}>
-                            <Typography variant='h5' color='secondary'>
-                                Lorem ipsum dolor sit amet consectetur.
-                            </Typography>
-                            <Box sx={{ display: 'flex', alignContent: 'start', gap: '1rem' }}>
-                                <Typography color='white' textAlign={'justify'}>
-                                    Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.
-                                </Typography>
-                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '30%' }}>
-                                    <Button variant='outlined' color='secondary' sx={{ borderRadius: '1rem', marginInline: 'auto' }}>
-                                        CALL TO ACTION
-                                    </Button>
-                                </Box>
-                            </Box>
-                        </Box>
-                    </Box>
-                </SwiperSlide>
-
-                <SwiperSlide >
-                    <Box sx={{ display: 'flex', backgroundColor: 'white', flexDirection: 'column' }}>
-                        <Box
-                            component={'img'}
                             src={Item2}
                             sx={{
                                 width: '100%',
@@ -97,7 +63,41 @@ export const BannersTres = () => {
                                 </Typography>
                                 <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '30%' }}>
                                     <Button variant='outlined' color='secondary' sx={{ borderRadius: '1rem', marginInline: 'auto' }}>
-                                        CALL TO ACTION
+                                        SEGUIR LEYENDO
+                                    </Button>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Box>
+                </SwiperSlide>
+
+                <SwiperSlide >
+                    <Box sx={{ display: 'flex', backgroundColor: 'white', flexDirection: 'column' }}>
+                        <Box
+                            component={'img'}
+                            src={Item}
+                            sx={{
+                                width: '100%',
+                                objectFit: 'cover',
+                                height: { xs: '20rem', md: '30rem' },
+                                flexShrink: 0,
+                            }}
+                        />
+                        <Box sx={{
+                            display: 'flex', flexDirection: 'column',
+                            gap: '1rem', alignItems: 'start',
+                            backgroundColor: 'primary.main', padding: '1rem 2rem'
+                        }}>
+                            <Typography variant='h5' color='secondary'>
+                                Lorem ipsum dolor sit amet consectetur.
+                            </Typography>
+                            <Box sx={{ display: 'flex', alignContent: 'start', gap: '1rem' }}>
+                                <Typography color='white' textAlign={'justify'}>
+                                    Donec enim nec nec odio a sit. Malesuada egestas leo sed bibendum risus maecenas sed sit ut. Non mattis ultricies venenatis id mi amet donec viverra.
+                                </Typography>
+                                <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'start', width: '30%' }}>
+                                    <Button variant='outlined' color='secondary' sx={{ borderRadius: '1rem', marginInline: 'auto' }}>
+                                        SEGUIR LEYENDO
                                     </Button>
                                 </Box>
                             </Box>

@@ -12,8 +12,6 @@ export const FooterDos = () => {
             flexDirection: { xs: 'column', md: 'row' },
             
         }}>
-
-
             <Box sx={{
                 flex: 1,
                 display: 'flex',
